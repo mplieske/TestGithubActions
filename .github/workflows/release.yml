@@ -15,11 +15,11 @@ jobs:
         run: pwd
       - name: ls
         run: ls
-      - name: Build
-        run: |
-          cd TestGithubActions
-          dotnet publish -r linux-x64
-          dotnet publish -r win-x64
-          dotnet publish -r osx-x64
+      - name: Build linux-x64
+        run: dotnet publish -r linux-x64
+      - name: Build win-x64
+        run: dotnet publish -r win-x64
+      - name: Build osx-x64
+        run: dotnet publish -r osx-x64
       - name: tree on publish
         run: tree ./bin/Release/netcoreapp3.1/publish
