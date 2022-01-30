@@ -20,8 +20,8 @@ namespace TestGithubActions
 
         public static decimal Divide(decimal a, decimal b)
         {
-            // intentional breaking code
-            return a * b;
+            // now is repaired
+            return a / b;
         }
     }
 }
