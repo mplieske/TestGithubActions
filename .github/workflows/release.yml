@@ -11,12 +11,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: List Root Dir
-        run: ls -alF
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        with:
-          files: |
-            README.md
+      - name: Build
+        run:
+          - dotnet publish --os linux-x64
+          - dotnet publish --os win-x64
+          - dotnet publish --os osx-x64
+      - name: tree on publish
+        run:
+          - tree ./TestGithubActions/bin/Release/netcoreapp3.1/publish
