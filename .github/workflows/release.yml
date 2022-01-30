@@ -13,8 +13,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: List Root Dir
+        run: ls -alF
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files:
-            - README.md
+          files: |
+            README.md
