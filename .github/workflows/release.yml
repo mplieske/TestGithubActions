@@ -12,9 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: pwd
-        run: |
-          pwd
-          ls
+        run: pwd
+      - name: ls
+        run: ls
       - name: Build
         run: |
           cd TestGithubActions
