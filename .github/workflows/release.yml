@@ -27,4 +27,4 @@ jobs:
       - name: Build osx-x64
         run: dotnet publish -r osx-x64
       - name: tree on publish
-        run: tree ./bin/Release/netcoreapp3.1/publish
+        run: tree ./TestGithubActions/bin/Release/netcoreapp3.1/publish
