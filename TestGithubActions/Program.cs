@@ -6,7 +6,12 @@ namespace TestGithubActions
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            decimal a = 1;
+            decimal b = 2;
+
+            Console.WriteLine($"{a} + {b} = {SimpleMath.Add(a, b)}");
+            Console.WriteLine($"{a} - {b} = {SimpleMath.Subtract(a, b)}");
+            Console.WriteLine($"{a} / {b} = {SimpleMath.Divide(a, b)}");
         }
     }
 }
